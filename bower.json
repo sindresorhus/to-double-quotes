@@ -1,0 +1,32 @@
+{
+  "name": "to-double-quotes",
+  "version": "0.0.0",
+  "description": "Convert matching single-quotes to double-quotes: I 'love' unicorns => I \"love\" unicorns",
+  "license": "MIT",
+  "main": "to-double-quotes.js",
+  "authors": [{
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  }],
+  "keywords": [
+    "normalize",
+    "quotes",
+    "quote",
+    "double",
+    "doublequotes",
+    "double-quotes",
+    "text",
+    "convert",
+    "string",
+    "code",
+    "matching",
+    "replace"
+  ],
+  "ignore": [
+    ".*",
+    "test.js",
+    "component.json",
+    "package.json"
+  ]
+}
