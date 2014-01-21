@@ -19,6 +19,7 @@
   "files": [
     "to-double-quotes.js"
   ],
+  "bin": "bin/to-double-quotes",
   "keywords": [
     "normalize",
     "quotes",
