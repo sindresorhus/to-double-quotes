@@ -1,6 +1,6 @@
 {
   "name": "to-double-quotes",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Convert matching single-quotes to double-quotes: I 'love' unicorns => I \"love\" unicorns",
   "license": "MIT",
   "main": "to-double-quotes.js",
