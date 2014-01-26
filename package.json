@@ -5,6 +5,9 @@
   "license": "MIT",
   "repository": "sindresorhus/to-double-quotes",
   "main": "to-double-quotes.js",
+  "bin": {
+    "to-double-quotes": "cli.js"
+  },
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
@@ -17,9 +20,9 @@
     "test": "mocha"
   },
   "files": [
-    "to-double-quotes.js"
+    "to-double-quotes.js",
+    "cli.js"
   ],
-  "bin": "bin/to-double-quotes",
   "keywords": [
     "normalize",
     "quotes",

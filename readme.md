@@ -15,6 +15,26 @@ Download [manually](https://github.com/sindresorhus/to-double-quotes/releases) o
 npm install --save to-double-quotes
 ```
 
+Or globally if you want to use it as a CLI app:
+
+```
+npm install --global to-double-quotes
+```
+
+You can then use it in your terminal like:
+
+```
+to-double-quotes src/*.txt
+```
+
+*(make sure to have a backup before running this!)*
+
+Or pipe something to it:
+
+```
+cat input.txt | to-double-quotes > output.txt
+```
+
 #### [Bower](http://bower.io)
 
 ```
