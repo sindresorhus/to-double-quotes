@@ -8,7 +8,7 @@
 (function () {
 	'use strict';
 	var toDoubleQuotes = function (str) {
-		return str.replace(/(?:\\*)?'[^']*'/g, function (match) {
+		return str.replace(/(?:\\*)?'([^'\\]*\\')*[^']*'/g, function (match) {
 			return match
 				.replace(/\\'/g, '\'')           // unescape single-quotes
 				.replace(/([^\\])"/g, '$1\\\"')  // escape double-quotes
