@@ -1,4 +1,4 @@
-# to-double-quotes [![Build Status](https://travis-ci.org/sindresorhus/to-double-quotes.png?branch=master)](http://travis-ci.org/sindresorhus/to-double-quotes)
+# to-double-quotes [![Build Status](https://travis-ci.org/sindresorhus/to-double-quotes.svg?branch=master)](https://travis-ci.org/sindresorhus/to-double-quotes)
 
 > Convert matching single-quotes to double-quotes: `I 'love' unicorns` => `I "love" unicorns`
 
@@ -9,46 +9,20 @@ See [to-single-quotes](https://github.com/sindresorhus/to-single-quotes) for the
 
 Download [manually](https://github.com/sindresorhus/to-double-quotes/releases) or with a package-manager.
 
-#### [npm](https://npmjs.org/package/to-double-quotes)
-
-```
-npm install --save to-double-quotes
+```bash
+$ npm install --save to-double-quotes
 ```
 
-Or globally if you want to use it as a CLI app:
-
-```
-npm install --global to-double-quotes
+```bash
+$ bower install --save to-double-quotes
 ```
 
-You can then use it in your terminal like:
-
-```
-to-double-quotes src/*.txt
-```
-
-*(make sure to have a backup before running this!)*
-
-Or pipe something to it:
-
-```
-cat input.txt | to-double-quotes > output.txt
-```
-
-#### [Bower](http://bower.io)
-
-```
-bower install --save to-double-quotes
-```
-
-#### [Component](https://github.com/component/component)
-
-```
-component install sindresorhus/to-double-quotes
+```basb
+$ component install sindresorhus/to-double-quotes
 ```
 
 
-## Example
+## Usage
 
 ##### Node.js
 
@@ -70,6 +44,28 @@ toDoubleQuotes('I love \'unicorns\' "and" \'ponies\'');
 ```
 
 
+## CLI
+
+You can also use it as a CLI app by installing it globally:
+
+```bash
+$ npm install --global to-double-quotes
+```
+
+### Usage
+
+```bash
+$ to-double-quotes --help
+
+Usage
+  to-double-quotes <path|glob>
+  cat input.txt | to-double-quotes > output.txt
+
+Example
+  to-double-quotes src/*.txt
+```
+
+
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
