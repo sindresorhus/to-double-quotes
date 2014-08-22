@@ -1,6 +1,6 @@
 'use strict';
 var assert = require('assert');
-var d = require('./to-double-quotes');
+var d = require('./');
 
 it('should convert single-quotes to double-quotes', function () {
 	assert.equal(d(''), '');
