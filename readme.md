@@ -5,7 +5,7 @@
 
 ## Usage
 
-```sh
+```
 $ npm install --save to-double-quotes
 ```
 
@@ -19,7 +19,7 @@ toDoubleQuotes('I love \'unicorns\' "and" \'ponies\'');
 
 ## CLI
 
-```sh
+```
 $ npm install --global to-double-quotes
 ```
 
