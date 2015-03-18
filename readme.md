@@ -27,11 +27,11 @@ $ npm install --global to-double-quotes
 $ to-double-quotes --help
 
   Usage
-    to-double-quotes <string>
-    echo <string> | to-double-quotes
+    $ to-double-quotes <string>
+    $ echo <string> | to-double-quotes
 
   Example
-    to-double-quotes "I love 'unicorns'"
+    $ to-double-quotes "I love 'unicorns'"
     I love "unicorns"
 ```
 
