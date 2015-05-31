@@ -16,3 +16,11 @@ it('should convert matching single-quotes to double-quotes', function () {
 	assert.equal(d('{\'a\':\'aa\\n<a href=\\\'addr\\\'>\'}'), JSON.stringify({'a': 'aa\n<a href=\'addr\'>'}));
 	assert.equal(d(JSON.stringify({'a': 'b""c' })), '{"a":"b\\\"\\\"c"}');
 });
+
+it('should convert matching single-quotes to double-quotes despite backslashes', function () {
+	assert.equal(d('\'1\\\"\''), '\"1\\\\\"\"', 'First sequence in the string');
+	assert.equal(d('\'\\\"\''), '\"\\\\\"\"', 'Not the first sequence in the string');
+	assert.equal(d('\'\\\\\"\''), '\"\\\\\\\"\"', 'Double backslash');
+	assert.equal(d('\'\\\\\" \\\\\"\''), '"\\\\\\" \\\\\\""', 'Repetition');
+	assert.equal(d('\'\\\\n \\\\\"\''), '"\\\\n \\\\\\""', 'With another backslash character');
+});
