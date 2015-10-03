@@ -2,9 +2,13 @@
 module.exports = function (str) {
 	return str.replace(/(?:\\*)?'([^'\\]*\\.)*[^']*'/g, function (match) {
 		return match
-			.replace(/\\'/g, '\'')                    // unescape single-quotes
-			.replace(/(^|[^\\])(\\+)"/g, '$1$2\\\"')  // escape escapes
-			.replace(/([^\\])"/g, '$1\\\"')           // escape double-quotes
-			.replace(/^'|'$/g, '"');                  // convert
+			// unescape single-quotes
+			.replace(/\\'/g, '\'')
+			// escape escapes
+			.replace(/(^|[^\\])(\\+)"/g, '$1$2\\\"')
+			// escape double-quotes
+			.replace(/([^\\])"/g, '$1\\\"')
+			// convert
+			.replace(/^'|'$/g, '"');
 	});
 };
