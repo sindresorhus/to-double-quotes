@@ -1,27 +1,27 @@
-/* eslint-env mocha */
-'use strict';
-var assert = require('assert');
-var d = require('./');
+import test from 'ava';
+import fn from './';
 
-it('should convert matching single-quotes to double-quotes', function () {
-	assert.equal(d(''), '');
-	assert.equal(d('foo'), 'foo');
-	assert.equal(d('\'\''), '""');
-	assert.equal(d('""'), '""');
-	assert.equal(d('\'foo\''), '"foo"');
-	assert.equal(d('"foo"'), '"foo"');
-	assert.equal(d('bar "foo" baz'), 'bar "foo" baz');
-	assert.equal(d('\'bar\' "foo" \'baz\''), '"bar" "foo" "baz"');
-	assert.equal(d('\\\'foo\\\''), '"foo"');
-	assert.equal(d('{\'a\':\'<a href=\\\'addr\\\'>\'}'), JSON.stringify({a: '<a href=\'addr\'>'}));
-	assert.equal(d('{\'a\':\'aa\\n<a href=\\\'addr\\\'>\'}'), JSON.stringify({a: 'aa\n<a href=\'addr\'>'}));
-	assert.equal(d(JSON.stringify({a: 'b""c'})), '{"a":"b\\\"\\\"c"}');
+test('convert matching single-quotes to double-quotes', t => {
+	t.is(fn(''), '');
+	t.is(fn('foo'), 'foo');
+	t.is(fn('\'\''), '""');
+	t.is(fn('""'), '""');
+	t.is(fn('\'foo\''), '"foo"');
+	t.is(fn('"foo"'), '"foo"');
+	t.is(fn('bar "foo" baz'), 'bar "foo" baz');
+	t.is(fn('\'bar\' "foo" \'baz\''), '"bar" "foo" "baz"');
+	t.is(fn('\\\'foo\\\''), '"foo"');
+	t.is(fn('{\'a\':\'<a href=\\\'addr\\\'>\'}'), JSON.stringify({a: '<a href=\'addr\'>'}));
+	t.is(fn('{\'a\':\'aa\\n<a href=\\\'addr\\\'>\'}'), JSON.stringify({a: 'aa\n<a href=\'addr\'>'}));
+	t.is(fn(JSON.stringify({a: 'b""c'})), '{"a":"b\\\"\\\"c"}');
+	t.end();
 });
 
-it('should convert matching single-quotes to double-quotes despite backslashes', function () {
-	assert.equal(d('\'1\\\"\''), '\"1\\\\\"\"', 'First sequence in the string');
-	assert.equal(d('\'\\\"\''), '\"\\\\\"\"', 'Not the first sequence in the string');
-	assert.equal(d('\'\\\\\"\''), '\"\\\\\\\"\"', 'Double backslash');
-	assert.equal(d('\'\\\\\" \\\\\"\''), '"\\\\\\" \\\\\\""', 'Repetition');
-	assert.equal(d('\'\\\\n \\\\\"\''), '"\\\\n \\\\\\""', 'With another backslash character');
+test('convert matching single-quotes to double-quotes despite backslashes', t => {
+	t.is(fn('\'1\\\"\''), '\"1\\\\\"\"', 'First sequence in the string');
+	t.is(fn('\'\\\"\''), '\"\\\\\"\"', 'Not the first sequence in the string');
+	t.is(fn('\'\\\\\"\''), '\"\\\\\\\"\"', 'Double backslash');
+	t.is(fn('\'\\\\\" \\\\\"\''), '"\\\\\\" \\\\\\""', 'Repetition');
+	t.is(fn('\'\\\\n \\\\\"\''), '"\\\\n \\\\\\""', 'With another backslash character');
+	t.end();
 });
