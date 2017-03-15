@@ -10,7 +10,7 @@
     "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && ava"
@@ -32,6 +32,9 @@
     "matching",
     "replace"
   ],
+  "dependencies": {
+    "to-single-quotes": "^3.0.0"
+  },
   "devDependencies": {
     "ava": "*",
     "xo": "*"
