@@ -1,42 +1,45 @@
 {
-  "name": "to-double-quotes",
-  "version": "3.0.0",
-  "description": "Convert matching single-quotes to double-quotes: I 'love' unicorns → I \"love\" unicorns",
-  "license": "MIT",
-  "repository": "sindresorhus/to-double-quotes",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "normalize",
-    "quotes",
-    "quote",
-    "double",
-    "doublequotes",
-    "double-quotes",
-    "text",
-    "convert",
-    "string",
-    "code",
-    "matching",
-    "replace"
-  ],
-  "dependencies": {
-    "to-single-quotes": "^3.0.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  }
+	"name": "to-double-quotes",
+	"version": "3.0.0",
+	"description": "Convert matching single-quotes to double-quotes: I 'love' unicorns → I \"love\" unicorns",
+	"license": "MIT",
+	"repository": "sindresorhus/to-double-quotes",
+	"funding": "https://github.com/sponsors/sindresorhus",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "https://sindresorhus.com"
+	},
+	"type": "module",
+	"exports": "./index.js",
+	"engines": {
+		"node": ">=12"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"normalize",
+		"quotes",
+		"quote",
+		"double",
+		"doublequotes",
+		"double-quotes",
+		"text",
+		"convert",
+		"string",
+		"code",
+		"matching",
+		"replace"
+	],
+	"dependencies": {
+		"to-single-quotes": "^3.0.0"
+	},
+	"devDependencies": {
+		"ava": "^3.15.0",
+		"xo": "^0.38.2"
+	}
 }
